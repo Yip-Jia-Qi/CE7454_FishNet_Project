@@ -37,16 +37,16 @@ class FishNet150_count(nn.Module):
         if not trainable:
             for param in self.net.parameters():
                 param.requires_grad = False
-            for param in self.net.fish.fish[1].parameters():
-                param.requires_grad = True
+            # for param in self.net.fish.fish[1].parameters():
+            #     param.requires_grad = True
             for param in self.net.fish.fish[2].parameters():
                 param.requires_grad = True
             for param in self.net.fish.fish[3].parameters():
                 param.requires_grad = True
             for param in self.net.fish.fish[4].parameters():
                 param.requires_grad = True
-            for param in self.net.fish.fish[5].parameters():
-                param.requires_grad = True
+            # for param in self.net.fish.fish[5].parameters():
+            #     param.requires_grad = True
         # self.net.fish.fish[9][4][1] = nn.Sequential(nn.Flatten(), 
         #                                             nn.Linear(in_features=1056, out_features= self.n_classes, bias=True),
         #                                             )
